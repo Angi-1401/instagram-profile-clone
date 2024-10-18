@@ -1,0 +1,47 @@
+#instagram-profile
+  width: 100%
+  margin-bottom: 1.25rem
+
+.profile
+  width: 100%
+  display: flex
+  gap: 1.75rem
+  margin-bottom: 1.25rem
+
+.profile-pic-container
+  display: flex
+  align-items: center
+  justify-content: center
+
+.profile-info
+  width: 100%
+  display: flex
+  flex-direction: column
+  gap: 12px
+
+.profile-row
+  display: flex
+  gap: 12px
+
+.desktop-statistics,
+.desktop-bio
+  display: none
+
+.profile-pic
+  width: 77px
+  border-radius: 50%
+
+@media only screen and (min-width: 768px)
+  .mobile-bio
+    display: none
+
+  .desktop-statistics,
+  .desktop-bio
+    display: block
+
+  .desktop-statistics
+    display: flex
+    gap: 12px
+
+  .profile-pic
+    width: 150px

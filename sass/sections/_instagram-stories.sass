@@ -1,0 +1,30 @@
+#instagram-stories
+  width: 100%
+  margin-bottom: 1.25rem
+
+.story-gallery
+  width: 100%
+  display: flex
+  flex-wrap: nowrap
+  gap: 12px
+  overflow-x: auto
+  scrollbar-width: none
+
+.story-container
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: 0.5rem
+
+.story-pic
+  width: 56px
+
+@media only screen and (min-width: 768px)
+  .story-gallery
+    justify-content: space-between
+    gap: 24px
+    padding-bottom: 3rem
+    border-bottom: 1px Solid #000
+
+  .story-pic
+    width: 88px

@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #fff;
+}
+
+main {
+  height: calc(100vh - 83px);
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #000;
+}
+
+.wrapper {
+  width: 100%;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    height: 100vh;
+    flex-direction: row;
+  }
+
+  .wrapper {
+    margin-right: 73px;
+    margin-left: 73px;
+    margin-bottom: 30px;
+  }
+}
+
+.btn {
+  padding: 0.25rem 0.75rem;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #e6e6e6;
+}
+
+.btn:hover {
+  background-color: #cccccc;
+  transition: background-color 0.25s;
+  cursor: pointer;
+}
+
+.btn-blue {
+  color: #fff;
+  background-color: #405DE6;
+}
+
+.btn-blue:hover {
+  background-color: #1936c0;
+}
+
+.btn-transp,
+.btn-transp:hover {
+  background: none;
+}
+
+.font-small {
+  font-size: small;
+}
+
+.font-smaller {
+  font-size: smaller;
+}
+
+.footer {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    width: 100%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer-links,
+  .footer-copyright {
+    display: flex;
+    gap: 12px;
+  }
+
+  .footer-link,
+  .footer-text {
+    font-size: 9px;
+  }
+
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+}
+
+.navbar-mini {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-mini-link {
+  display: flex;
+  align-items: center;
+}
+
+#font-hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar-mini {
+    padding-top: 0;
+  }
+
+  .navbar-mini-link {
+    gap: 8px;
+  }
+
+  #font-hidden {
+    display: inline;
+  }
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 0.5rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px Solid #000;
+}
+
+.navbar-title {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.navbar-icon {
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem 1.75rem;
+  display: flex;
+  justify-content: center;
+  border-top: 1px Solid #000;
+}
+
+.sidebar-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar-brand,
+.sidebar-content-extra {
+  display: none;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-title {
+  display: none;
+}
+
+.sidebar-icon,
+.sidebar-logo-sm {
+  width: 1.75rem;
+}
+
+.sidebar-logo-sm:hover {
+  cursor: pointer;
+}
+
+.sidebar-logo {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: initial;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 1.75rem;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: none;
+    border-right: 1px Solid #000;
+  }
+
+  .sidebar-brand {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar-content {
+    height: 100%;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1rem;
+  }
+
+  .sidebar-brand,
+  .sidebar-content-extra {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .sidebar-link {
+    gap: 12px;
+  }
+
+  .sidebar-title {
+    display: inline;
+  }
+
+  .sidebar-logo-sm {
+    display: none;
+  }
+
+  .sidebar-logo {
+    display: inline;
+    height: 1.75rem;
+  }
+}
+
+#instagram-profile {
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.post-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+.post-preview {
+  position: relative;
+}
+
+.post-preview:hover .post-reactions {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.post-reactions {
+  display: none;
+}
+
+.post-likes,
+.post-comments {
+  color: #fff;
+}
+
+.post-thumbnail {
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.post-mark {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  color: #fff;
+}
+
+#instagram-profile {
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.profile {
+  width: 100%;
+  display: flex;
+  gap: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.profile-pic-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-row {
+  display: flex;
+  gap: 12px;
+}
+
+.desktop-statistics,
+.desktop-bio {
+  display: none;
+}
+
+.profile-pic {
+  width: 77px;
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-bio {
+    display: none;
+  }
+
+  .desktop-statistics,
+  .desktop-bio {
+    display: block;
+  }
+
+  .desktop-statistics {
+    display: flex;
+    gap: 12px;
+  }
+
+  .profile-pic {
+    width: 150px;
+  }
+}
+
+#instagram-stories {
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.story-gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.story-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.story-pic {
+  width: 56px;
+}
+
+@media only screen and (min-width: 768px) {
+  .story-gallery {
+    justify-content: space-between;
+    gap: 24px;
+    padding-bottom: 3rem;
+    border-bottom: 1px Solid #000;
+  }
+
+  .story-pic {
+    width: 88px;
+  }
+}
+
+#mobile-statistics {
+  width: 100%;
+}
+
+#mobile-statistics div {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 1px Solid #000;
+  border-bottom: 1px Solid #000;
+}
+
+@media only screen and (min-width: 768px) {
+  #mobile-statistics {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
