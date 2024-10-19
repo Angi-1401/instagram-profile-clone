@@ -1,25 +1,24 @@
+@import ../utils/_mixins
+
 .sidebar
   position: fixed
   z-index: 10
   bottom: 0
   width: 100%
   padding: 0.5rem 1.75rem
-  display: flex
-  justify-content: center
+  @include flex-row(normal, center)
   border-top: 1px Solid #000
 
 .sidebar-content
   width: 100%
-  display: flex
-  justify-content: space-between
+  @include flex-row(normal, space-between)
 
 .sidebar-brand,
 .sidebar-content-extra
   display: none
 
 .sidebar-link
-  display: flex
-  align-items: center
+  @include flex-row(center)
 
 .sidebar-title
   display: none
@@ -42,8 +41,7 @@
     bottom: initial
     width: fit-content
     padding: 1.75rem
-    flex-direction: column
-    justify-content: space-between
+    @include flex-col(normal, space-between)
     border-top: none
     border-right: 1px Solid #000
 
@@ -54,24 +52,24 @@
 
   .sidebar-content
     height: 100%
-    flex-direction: column
-    justify-content: start
+    @include flex-col()
     gap: 1rem
 
   .sidebar-brand,
   .sidebar-content-extra
-    display: flex
+    display: block
 
 @media only screen and (min-width: 1024px)
   .sidebar-link
     gap: 12px
 
   .sidebar-title
-    display: inline
+    display: block
+    font-weight: normal
 
   .sidebar-logo-sm
     display: none
 
   .sidebar-logo
-    display: inline
-    height: 1.75rem // If you change this for width: ; , it'll break :v
+    display: block
+    height: 1.75rem // If you change this for 'width: ' , it'll break :v

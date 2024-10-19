@@ -127,12 +127,14 @@ p {
   margin-bottom: 1.25rem;
   padding-top: 1rem;
   display: flex;
+  align-items: normal;
   justify-content: space-around;
 }
 
 .navbar-mini-link {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 #font-hidden {
@@ -149,7 +151,7 @@ p {
   }
 
   #font-hidden {
-    display: inline;
+    display: block;
   }
 }
 
@@ -186,6 +188,7 @@ p {
   width: 100%;
   padding: 0.5rem 1.75rem;
   display: flex;
+  align-items: normal;
   justify-content: center;
   border-top: 1px Solid #000;
 }
@@ -193,6 +196,7 @@ p {
 .sidebar-content {
   width: 100%;
   display: flex;
+  align-items: normal;
   justify-content: space-between;
 }
 
@@ -204,6 +208,7 @@ p {
 .sidebar-link {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .sidebar-title {
@@ -232,7 +237,9 @@ p {
     width: -moz-fit-content;
     width: fit-content;
     padding: 1.75rem;
+    display: flex;
     flex-direction: column;
+    align-items: normal;
     justify-content: space-between;
     border-top: none;
     border-right: 1px Solid #000;
@@ -246,14 +253,16 @@ p {
 
   .sidebar-content {
     height: 100%;
+    display: flex;
     flex-direction: column;
-    justify-content: start;
+    align-items: normal;
+    justify-content: flex-start;
     gap: 1rem;
   }
 
   .sidebar-brand,
   .sidebar-content-extra {
-    display: flex;
+    display: block;
   }
 }
 
@@ -263,7 +272,8 @@ p {
   }
 
   .sidebar-title {
-    display: inline;
+    display: block;
+    font-weight: normal;
   }
 
   .sidebar-logo-sm {
@@ -271,7 +281,7 @@ p {
   }
 
   .sidebar-logo {
-    display: inline;
+    display: block;
     height: 1.75rem;
   }
 }
@@ -283,6 +293,7 @@ p {
 
 .post-gallery {
   display: grid;
+  grid-template-rows: none;
   grid-template-columns: repeat(3, 1fr);
   gap: 3px;
 }
@@ -300,7 +311,7 @@ p {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .post-reactions {
@@ -333,6 +344,8 @@ p {
 .profile {
   width: 100%;
   display: flex;
+  align-items: normal;
+  justify-content: flex-start;
   gap: 1.75rem;
   margin-bottom: 1.25rem;
 }
@@ -347,11 +360,15 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: normal;
+  justify-content: flex-start;
   gap: 12px;
 }
 
 .profile-row {
   display: flex;
+  align-items: normal;
+  justify-content: flex-start;
   gap: 12px;
 }
 
@@ -377,6 +394,8 @@ p {
 
   .desktop-statistics {
     display: flex;
+    align-items: normal;
+    justify-content: flex-start;
     gap: 12px;
   }
 
@@ -393,6 +412,8 @@ p {
 .story-gallery {
   width: 100%;
   display: flex;
+  align-items: normal;
+  justify-content: flex-start;
   flex-wrap: nowrap;
   gap: 12px;
   overflow-x: auto;
@@ -403,6 +424,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   gap: 0.5rem;
 }
 
@@ -428,9 +450,10 @@ p {
 }
 
 #mobile-statistics div {
-  display: flex;
-  justify-content: space-around;
   padding: 1rem 0;
+  display: flex;
+  align-items: normal;
+  justify-content: space-around;
   text-align: center;
   border-top: 1px Solid #000;
   border-bottom: 1px Solid #000;

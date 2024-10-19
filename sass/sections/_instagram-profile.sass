@@ -1,26 +1,25 @@
+@import ../utils/_mixins
+
 #instagram-profile
   width: 100%
   margin-bottom: 1.25rem
 
 .profile
   width: 100%
-  display: flex
+  @include flex-row()
   gap: 1.75rem
   margin-bottom: 1.25rem
 
 .profile-pic-container
-  display: flex
-  align-items: center
-  justify-content: center
+  @include flex-row(center, center)
 
 .profile-info
   width: 100%
-  display: flex
-  flex-direction: column
+  @include flex-col()
   gap: 12px
 
 .profile-row
-  display: flex
+  @include flex-row()
   gap: 12px
 
 .desktop-statistics,
@@ -40,7 +39,7 @@
     display: block
 
   .desktop-statistics
-    display: flex
+    @include flex-row()
     gap: 12px
 
   .profile-pic
